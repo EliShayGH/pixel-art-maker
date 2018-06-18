@@ -1,8 +1,3 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
 document.querySelector('#buttonSubmit').addEventListener('click',function makeGrid(event) {
   const rows = document.querySelector('#inputHeight').value;
   const columns = document.querySelector('#inputWidth').value;
@@ -26,9 +21,8 @@ document.querySelector('#buttonSubmit').addEventListener('click',function makeGr
     }
 
     table.appendChild(tr_element);
-// mainHeading.style.backgroundColor
-    event.preventDefault();
 
+    event.preventDefault();
   }
 });
 
@@ -39,4 +33,11 @@ function EmptyMatrix() {
   {
     document.querySelector('table').removeChild(tr_node_list[i]);
   }
+}
+
+document.querySelector('#pixelCanvas').addEventListener('click',SetPixelColor);
+
+function SetPixelColor(event) {
+  const color = document.querySelector('#colorPicker').value;
+  event.target.style.backgroundColor = color;
 }
