@@ -14,15 +14,21 @@ document.querySelector('#buttonSubmit').addEventListener('click',function makeGr
   {
     let tr_element = document.createElement('tr');
 
+    tr_element.classList.add('canvas_pixel');
+
     for (let j = 0; j < columns; ++j)
     {
       let td_element = document.createElement('td');
+
+      td_element.classList.add('canvas_pixel');
+
       tr_element.appendChild(td_element);
     }
 
     table.appendChild(tr_element);
-
+// mainHeading.style.backgroundColor
     event.preventDefault();
+
   }
 });
 
