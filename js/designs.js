@@ -38,18 +38,19 @@ function EmptyMatrix() {
 document.querySelector('#pixelCanvas').addEventListener('click',SetPixelColor);
 
 function SetPixelColor(event) {
-  const usr_color = document.querySelector('#colorPicker').value;
-  const pixel_color = event.target.style.backgroundColor;
+ const usr_color = document.querySelector('#colorPicker').value;
+ const pixel_color = event.target.style.backgroundColor;
 
-  if (hexToRgb(usr_color) != pixel_color)
-  {
-      event.target.style.backgroundColor = usr_color;
-  }
-  else
-  {
-      event.target.style.backgroundColor = null;
-  }
+ if (hexToRgb(usr_color) != pixel_color)
+ {
+     event.target.style.backgroundColor = usr_color;
+ }
+ else
+ {
+     event.target.style.backgroundColor = null;
+ }
 }
+
 
 function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);

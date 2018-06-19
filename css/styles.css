@@ -1,5 +1,12 @@
 body {
     text-align: center;
+    background-image: url('../imgs/background_img.jpg');
+    background-blend-mode: lighten;
+}
+
+.background {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 h1 {
@@ -10,6 +17,7 @@ h1 {
 
 h2 {
     margin: 1em 0 0.25em;
+    /* font-weight: bold; */
 }
 
 h2:first-of-type {
